@@ -28,12 +28,12 @@ This caused:
 
 **Updated vite.config.ts:**
 ```typescript
-base: process.env.NODE_ENV === 'production' ? '/DesignCraft/' : '/'
+base: process.env.NODE_ENV === 'production' ? '/OnSite/' : '/'
 ```
 
 **This means:**
 - 🟢 **Local dev** (`npm run dev`): Uses base `/`
-- 🟢 **Production build** (`npm run build`): Uses base `/DesignCraft/`
+- 🟢 **Production build** (`npm run build`): Uses base `/OnSite/`
 
 ---
 
@@ -58,9 +58,9 @@ npm run deploy
 ```
 
 This will:
-1. Build with base path `/DesignCraft/`
+1. Build with base path `/OnSite/`
 2. Deploy to GitHub Pages
-3. Work correctly at: `https://Top29-sudo.github.io/DesignCraft/`
+3. Work correctly at: `https://top29-sudo.github.io/OnSite/`
 
 ---
 
@@ -74,8 +74,8 @@ http://localhost:5173/bolt  ← God-Tier AI Builder
 
 ### **GitHub Pages (Production):**
 ```
-https://Top29-sudo.github.io/DesignCraft/
-https://Top29-sudo.github.io/DesignCraft/bolt  ← God-Tier AI Builder
+https://top29-sudo.github.io/OnSite/
+https://top29-sudo.github.io/OnSite/bolt  ← God-Tier AI Builder
 ```
 
 ---
@@ -85,18 +85,18 @@ https://Top29-sudo.github.io/DesignCraft/bolt  ← God-Tier AI Builder
 ### **Errors You Saw:**
 ```
 Failed to load resource: the server responded with a status of 404
-index-4k8GVRDK.css:1 Failed to load resource: 404
+GET https://top29-sudo.github.io/DesignCraft/assets/index-4k8GVRDK.css 404
 ```
 
 ### **Root Cause:**
-Browser was looking for:
+After renaming repository to "OnSite", browser was looking for:
 ```
-http://localhost:5173/DesignCraft/assets/index-4k8GVRDK.css
+https://top29-sudo.github.io/DesignCraft/assets/index-4k8GVRDK.css
 ```
 
-But file was actually at:
+But should have been:
 ```
-http://localhost:5173/assets/index-4k8GVRDK.css
+https://top29-sudo.github.io/OnSite/assets/index-4k8GVRDK.css
 ```
 
 ### **Solution:**
@@ -135,7 +135,7 @@ npm run deploy
 
 ### **3. Access on GitHub Pages:**
 ```
-https://Top29-sudo.github.io/DesignCraft/bolt
+https://top29-sudo.github.io/OnSite/bolt
 ```
 
 ---
