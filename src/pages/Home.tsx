@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, Check, Code, Layout, Database, Users } from 'lucide-react';
+import { ArrowRight, Check, Code, Layout, Database, Users, Sparkles } from 'lucide-react';
 import { reviews } from '../data/reviews';
 import ReviewCard from '../components/reviews/ReviewCard';
 
@@ -22,6 +22,10 @@ const HomePage = () => {
         
         <div className="container relative">
           <div className="max-w-3xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
+              <Sparkles className="w-4 h-4" />
+              <span className="text-sm font-medium">NEW: AI Website Builder</span>
+            </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Transforming Ideas Into <br className="hidden sm:block" />
               <span className="text-white/90">Digital Excellence</span>
@@ -32,6 +36,10 @@ const HomePage = () => {
               experiences that drive results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/bolt" className="btn bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700 flex items-center gap-2 shadow-lg">
+                <Sparkles className="w-5 h-5" />
+                Try AI Builder
+              </Link>
               <Link to="/packages" className="btn bg-white text-primary-700 hover:bg-white/90">
                 View Packages
               </Link>
