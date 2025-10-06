@@ -16,6 +16,7 @@ import ResetPasswordPage from './pages/auth/ResetPasswordPage';
 import DashboardPage from './pages/dashboard/Dashboard';
 import OrdersPage from './pages/dashboard/Orders';
 import ProfilePage from './pages/dashboard/Profile';
+import { Bolt } from './pages/Bolt';
 
 // Protected Route
 import ProtectedRoute from './components/auth/ProtectedRoute';
@@ -23,6 +24,9 @@ import ProtectedRoute from './components/auth/ProtectedRoute';
 function App() {
   return (
     <Routes>
+      {/* Bolt.new Clone - Full Screen Route */}
+      <Route path="/bolt" element={<Bolt />} />
+      
       <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />
         <Route path="packages" element={<PackagesPage />} />
