@@ -36,10 +36,10 @@ export const BoltChat: React.FC<BoltChatProps> = ({
   };
 
   const examplePrompts = [
-    "Create a beautiful landing page for a SaaS product",
-    "Build a todo app with React and local storage",
-    "Create a portfolio website with dark mode",
-    "Build a weather app with API integration"
+    "Build a full-stack e-commerce product page with cart, checkout, and payment integration",
+    "Create a complete task management app with user authentication, real-time updates, and database",
+    "Build a professional portfolio website with blog, contact form, admin panel, and CMS",
+    "Create a weather dashboard with API integration, geolocation, favorites, and data visualization"
   ];
 
   return (
@@ -47,12 +47,12 @@ export const BoltChat: React.FC<BoltChatProps> = ({
       {/* Header */}
       <div className="bg-gray-900 border-b border-gray-700 px-6 py-4">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+          <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center animate-pulse">
             <Sparkles className="w-6 h-6 text-white" />
           </div>
           <div>
-            <h1 className="text-xl font-bold text-white">Bolt.new Clone</h1>
-            <p className="text-sm text-gray-400">Powered by Gemini 2.0 Flash & WebContainer</p>
+            <h1 className="text-xl font-bold text-white">God-Tier AI Website Builder</h1>
+            <p className="text-sm text-gray-400">Production-Grade Full-Stack Apps • Gemini 2.0 Flash • WebContainer</p>
           </div>
         </div>
       </div>
@@ -65,10 +65,10 @@ export const BoltChat: React.FC<BoltChatProps> = ({
               <Sparkles className="w-10 h-10 text-white" />
             </div>
             <h2 className="text-2xl font-bold text-white mb-2">
-              What would you like to build?
+              What production-grade application should I build?
             </h2>
             <p className="text-gray-400 mb-8 max-w-md">
-              Describe your website or web app, and I'll generate production-ready code with live preview
+              Describe any full-stack application - I'll generate bulletproof, enterprise-ready code with complete frontend, backend, database, authentication, and live preview
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-2xl">
               {examplePrompts.map((prompt, index) => (
