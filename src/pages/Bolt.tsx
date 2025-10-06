@@ -50,8 +50,17 @@ export const Bolt: React.FC = () => {
 
       // Mount files to WebContainer
       addMessage('system', '📦 Setting up WebContainer...');
-      await webContainerService.mountFiles(result.files);
-      setFiles(result.files);
+      try {
+        await webContainerService.mountFiles(result.files);
+        setFiles(result.files);
+      } catch (error) {
+        console.error('WebContainer error:', error);
+        addMessage('system', '⚠️ WebContainer unavailable on GitHub Pages. Files generated but cannot be executed here.');
+        addMessage('system', '💡 To run the code: Download files or deploy to Vercel/Netlify, or run locally.');
+        setFiles(result.files);
+        setViewMode('code');
+        return;
+      }
 
       addMessage('system', '⚙️ Installing dependencies...');
       

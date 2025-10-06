@@ -17,12 +17,15 @@ class WebContainerService {
 
     this.bootPromise = (async () => {
       try {
-        // Note: WebContainer auth is handled automatically in newer versions
+        // Note: WebContainer requires specific CORS headers which GitHub Pages doesn't support
+        // This will work on localhost and platforms like Vercel/Netlify
         this.container = await WebContainer.boot();
         console.log('WebContainer booted successfully');
       } catch (error) {
         console.error('Failed to boot WebContainer:', error);
-        throw error;
+        console.warn('WebContainer requires CORS headers. Please use Vercel, Netlify, or run locally.');
+        // Don't throw - allow app to load even if WebContainer fails
+        // throw error;
       }
     })();
 
